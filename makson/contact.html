@@ -5,6 +5,59 @@
 	<title>Makson</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	<link rel="stylesheet" href="css/style.css">
+	<style>
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333;
+		background:#666;
+	}
+
+	li {
+		float: left;
+	}
+
+	li a, .dropbtn {
+		display: inline-block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+	li a:hover, .dropdown:hover .dropbtn {
+		background-color: red;
+	}
+
+	li.dropdown {
+		display: inline-block;
+	}
+
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+	}
+
+	.dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		text-align: left;
+	}
+
+	.dropdown-content a:hover {background-color: #f1f1f1}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+</style>
 </head>
 
 <body>
@@ -12,43 +65,51 @@
 		<div id="header">
 			<h1>Makson</h1>
 		</div>
-		<div id="nav">
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="modalidades.html">Modalidades</a></li>
-				<li><a href="terapias.html">Terapias</a></li>
-				<li><a href="horarios.html">Horários</a></li>
-				<li><a class="active" href="contact.html">Contato</a></li>
-			</ul>
-		</div>
+		<ul>
+		  <li><a href="index.html">Home</a></li>
+		  <li class="dropdown">
+			<a href="javascript:void(0)" class="dropbtn">Modalidades</a>
+			<div class="dropdown-content">
+			  <a href="#">Boxe Chines</a>
+			  <a href="#">Kung Fu</a>
+			  <a href="#">Cross Treino</a>
+			  <a href="#">Musculação</a>
+			  <a href="#">Sobre o mestre</a>
+			  <a href="#">Fotos</a>
+			</div>
+		  </li>
+		  <li class="dropdown">
+			<a href="javascript:void(0)" class="dropbtn">Studio</a>
+			<div class="dropdown-content">
+			  <a href="#">Pilates</a>
+			  <a href="#">Acumputura</a>
+			  <a href="#">Sobre o mestre</a>
+			  <a href="#">Fotos</a>
+			</div>
+		  </li>
+		  <li><a href="horarios.html">Horarios</a></li>
+		  <li><a href="contact.html">Contatos</a></li>
+		</ul>
 		<div id="main">
-		</div>
-		<div id="main">
-			<h1>Contato</h1>
-			<form>
-				<div>
-					<label>Nome</label><br>
-					<input type="text" name="name"><br>		
-				</div>
-				<br>
-				<div>
-					<label>email</label><br>
-					<input type="email" name="name"><br>		
-				</div>
-				<br>
-				<div>
-					<label>Mensagem</label><br>
-					<textarea name="name"></textarea><br>	
-				</div>
-				<button type="submit">Enviar</button><br>
-			</form>
+		 <form>
+			<div>
+				<label>Nome</label><br>
+				<input type="text" name="name"><br>		
+			</div>
+			<br>
+			<div>
+				<label>email</label><br>
+				<input type="email" name="name"><br>		
+			</div>
+			<br>
+			<div>
+				<label>Mensagem</label><br>
+				<textarea name="name"></textarea><br>	
+			</div>
+			<button type="submit">Enviar</button><br>
+		</form>
 		</div>
 		
-		<div class="clr">
-		</div>
-		<div id="footer">
-			<p>Copyright &copy; 2016</p>
-		</div>
 	</div>
 </body>
 

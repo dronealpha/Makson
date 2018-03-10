@@ -2,33 +2,127 @@
 <html>
 
 <head>
-	<title>Home | simple HTML Template</title>
+	<title>Makson</title>
 	<link rel="stylesheet" href="css/style.css">
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
+
+<style>
+	ul {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+		overflow: hidden;
+		background-color: #333;
+		background:#666;
+	}
+
+	li {
+		float: left;
+	}
+
+	li a, .dropbtn {
+		display: inline-block;
+		color: white;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+	}
+
+	li a:hover, .dropdown:hover .dropbtn {
+		background-color: red;
+	}
+
+	li.dropdown {
+		display: inline-block;
+	}
+
+	.dropdown-content {
+		display: none;
+		position: absolute;
+		background-color: #f9f9f9;
+		min-width: 160px;
+		box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+		z-index: 1;
+	}
+
+	.dropdown-content a {
+		color: black;
+		padding: 12px 16px;
+		text-decoration: none;
+		display: block;
+		text-align: left;
+	}
+
+	.dropdown-content a:hover {background-color: #f1f1f1}
+
+	.dropdown:hover .dropdown-content {
+		display: block;
+	}
+</style>
 </head>
+
 
 <body>
 	<div id="container">
 		<div id="header">
 			<h1>Makson</h1>
 		</div>
-		<div id="nav">
-			<ul>
-				<li><a class="active" href="index.html">Home</a></li>
-				<li><a href="modalidades.html">Modalidades</a></li>
-				<li><a href="terapias.html">Terapias</a></li>
-				<li><a href="horarios.html">Horários</a></li>
-				<li><a href="contact.html">Contato</a></li>
-			</ul>
+		<ul>
+		  <li><a href="#home">Home</a></li>
+		  <li class="dropdown">
+			<a href="javascript:void(0)" class="dropbtn">Modalidades</a>
+			<div class="dropdown-content">
+			  <a href="#">Boxe Chines</a>
+			  <a href="#">Kung Fu</a>
+			  <a href="#">Cross Treino</a>
+			  <a href="#">Musculação</a>
+			  <a href="#">Sobre o mestre</a>
+			  <a href="#">Fotos</a>
+			</div>
+		  </li>
+		  <li class="dropdown">
+			<a href="javascript:void(0)" class="dropbtn">Studio</a>
+			<div class="dropdown-content">
+			  <a href="#">Pilates</a>
+			  <a href="#">Acumputura</a>
+			  <a href="#">Sobre o mestre</a>
+			  <a href="#">Fotos</a>
+			</div>
+		  </li>
+		  <li><a href="horarios.html">Horarios</a></li>
+		  <li><a href="contact.html">Contatos</a></li>
+		</ul>
+		
+		<div id="main" align ="center">
+		<br><br>
+		<div class="w3-content w3-section" style="max-width:400px" align ="center">
+		  <a href="modalidades.html"><img class="mySlides" src="img/crossbanner.jpg" style="width:100%"></a>
+		  <a href="terapias.html"><img class="mySlides" src="img/kungbanner.jpg" style="width:90%"></a>
+		  <a href="contact.html"><img class="mySlides" src="img/pilatesbanner.jpg" style="width:100%"></a>
 		</div>
-		<div id="main">
-			
 		</div>
-		<div class="clr">
-		</div>
-		<div id="footer">
-			<p>Copyright &copy; 2016</p>
-		</div>
+		<script>
+			var myIndex = 0;
+			carousel();
+
+			function carousel() {
+				var i;
+				var x = document.getElementsByClassName("mySlides");
+				for (i = 0; i < x.length; i++) {
+				   x[i].style.display = "none";  
+				}
+				myIndex++;
+				if (myIndex > x.length) {myIndex = 1}    
+				x[myIndex-1].style.display = "block";  
+				setTimeout(carousel, 2000); // Change image every 2 seconds
+			}
+		</script>
+
 	</div>
 </body>
 
