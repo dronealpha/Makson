@@ -61,7 +61,25 @@ ul{
    margin-top:20px;
    padding:10px;
 }
+th{
+	color: blue;
+}
 
+td{
+	color: white;
+}
+
+
+.contact {
+    width: 75%;
+    float: left;
+    padding: 15px;
+    border: 1px solid red;
+}
+
+b{
+	color: white;
+}
 #footer{
    text-align: center;
    padding:10px;
